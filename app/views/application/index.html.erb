@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="large-6 columns">
+    <div class="row">
+      <%= form_tag urls_path, method: :post, remote: true, id: "new_url_form" do %>
+        <div class="large-9 columns">
+          <%= text_field_tag "url[long]", nil, placeholder: "Type an URL..." %>
+        </div>
+        <div class="large-3 columns">
+          <%= submit_tag "shorten", class: "button tiny" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <table id="anonymous_shortened_urls">
+      </table>
+    </div>
+  </div>
+  <div class="large-6 columns">
+    <% if current_user %>
+      <table id="user_shortened_urls">
+        <% @urls.each do |url| %>
+          <%= render url %>
+        <% end %>
+      </table>
+    <% else %>
+      <%= render "devise/sessions/form" %>
+    <% end %>
+  </div>
+</div>

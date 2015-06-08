@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "RGShortener" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="nav-bar right">
+          <ul class="button-group">
+            <% if current_user %>
+            <li><%= link_to "logout", destroy_user_session_path,method: :delete, class: "button"%></li>
+            <% end %>
+          </ul>
+        </div>
+        <h1>RGShortener<small> URL shortener</small></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <hr/>
+        <%= yield %>
+      </div>
+    </div>
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr/>
+        <p>© Copyright Rodrigo Gouvea - 2015.</p>
+      </div>
+    </footer>
+  </body>
+</html>

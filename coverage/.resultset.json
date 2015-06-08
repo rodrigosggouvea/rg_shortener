@@ -442,6 +442,9 @@
       "/home/action/rg_shortener/config/routes.rb": [
         1,
         1,
+        1,
+        1,
+        1,
         null,
         null,
         null,
@@ -504,10 +507,29 @@
         null,
         1,
         null,
+        null,
+        1,
         null
       ],
       "/home/action/rg_shortener/app/helpers/application_helper.rb": [
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/home/action/rg_shortener/spec/support/database_cleaner.rb": [
@@ -520,7 +542,7 @@
         null,
         null,
         1,
-        0,
+        5,
         null,
         null,
         1,
@@ -528,16 +550,16 @@
         null,
         null,
         1,
-        0,
+        5,
         null,
         null,
         1,
-        0,
+        5,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1433534893
+    "timestamp": 1433780213
   }
 }

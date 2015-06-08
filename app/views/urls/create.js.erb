@@ -1,5 +1,4 @@
-var shortened_url = "<%= short_url(@url[:long], current_user) %>";
-var link = "<tr><td><a href='" + shortened_url + "'>" + shortened_url + "</a></td></tr>";
+var link = "<%= j render(@url) %>";
 <% if current_user %>
   var div_to_append = $("#user_shortened_urls");
 <% else %>
